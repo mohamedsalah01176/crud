@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* background:linear-gradient(#222 ,#333); */
+    background-color: #333;
+    color: #fff;
+    font-family: system-ui;
+}
+.crud{
+    width: 80%;
+    margin:auto;
+    height: 100vh;
+}
+.crud .head{
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.crud .input .title input{
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding:5px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    margin: 4px 0;
+    transition: .4s;
+}
+.crud .input .price input{
+    width: 20%;
+    background-color: #111;
+    color:#fff;
+    padding: 5px;
+    margin: 5px 0;
+    border: none;
+    height: 30px;
+    outline: none;
+    border-radius: 6px;
+    margin-right:  5px ;
+    transition: .4s;
+}
+.crud .input .price #total{
+    background-color: #db1212;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.crud .input .price #total::before{
+    content: "total: ";
+}
+.crud .input input:focus{
+    background-color: #000;
+    transform: scale(1.1);
+}
+.crud .input .title button{
+    width: 100%;
+    background-color: #390053;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 40px;
+    transition: .4s;
+    margin-left: 10px;
+}
+.crud .input .title button:hover{
+    letter-spacing: 1px;
+    background-color: #51025f;
+}
+.crud .output .search input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: #111;
+    color:white;
+    padding: 5px;
+    transition: .4s;
+    margin: 5px 0;
+}
+.crud .output .search input:focus{
+    background-color: #000;
+    transform: scale(1.1);
+}
+.crud .output .btn-search{
+    display: flex;
+    justify-content: space-between;
+    margin-left:10px;
+}
+.crud .output  .btn-search button{
+    width: 45%;
+    height: 40px;
+    background-color: #390053;
+    padding: 5px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.crud .output .btn-search button:hover{
+    letter-spacing: 1px;
+    background-color: #51025f;
+}
+#deletall button{
+    width: 100%;
+    height: 40px;
+    background-color: #390053;
+    padding: 5px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    margin: 10px 0 10px 5px;
+}
+#deletall button:hover{
+    letter-spacing: 1px;
+    background-color: #51025f;
+}
+.crud .output table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+.crud .output table th{
+    text-transform:uppercase ;
+}
+.crud .output table th,
+.crud .output table td{
+    padding: 5px;
+}
+.crud .output table button{
+    height: 40px;
+    background-color: #390053;
+    padding: 5px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.crud .output table button:hover{
+    background-color: #51025f;
+}
