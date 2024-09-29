@@ -26,10 +26,11 @@ inputs.forEach(input =>{
 
 
 let datapro=[];
-if(localStorage.product !== null){
+if(localStorage.product !== undefined){
     datapro=JSON.parse(localStorage.product);
 }else{
     datapro=[];
+    localStorage.setItem('product',JSON.stringify(datapro))
 };
 
 
@@ -45,17 +46,9 @@ submit.onclick=function(){
         count:count.value,
         category:category.value.toLowerCase()
     }
-    if(title.value !==""&& price.value!==""&&category.value!=="" &&count.value<100){
+    if(title.value !==" "&& price.value!==" "&&category.value!==" " &&count.value>0){
         if(mood ==="create"){
-            if(newpro.count>1){
-                
-                for(let i=0;i<newpro.count;i++){
-                    datapro.push(newpro);
-                };
-                
-            }else{
-                datapro.push(newpro);
-            };
+            datapro.push(newpro);
         }else{
             datapro[temp]=newpro;
             mood="create";
@@ -97,7 +90,8 @@ function showData(){
             <td>${datapro[i].taxes}</td>
             <td>${datapro[i].ads}</td>
             <td>${datapro[i].discount}</td>
-            <td>${datapro[i].total}</td>
+            <td>${datapro[i].count}</td>
+            <td>${datapro[i].total*count.value}</td>
             <td>${datapro[i].category}</td>
             <td><button onclick="updata(${i})" id="updata">Updata</button></td>
             <td><button onclick="deletedata(${i})" id="delete">Delete</button></td>
@@ -182,7 +176,8 @@ function searchData(value){
             <td>${datapro[i].taxes}</td>
             <td>${datapro[i].ads}</td>
             <td>${datapro[i].discount}</td>
-            <td>${datapro[i].total}</td>
+            <td>${datapro[i].count}</td>
+            <td>${datapro[i].total*count.value}</td>
             <td>${datapro[i].category}</td>
             <td><button onclick="updata(${i})" id="updata">Updata</button></td>
             <td><button onclick="deletedata(${i})" id="delete">Delete</button></td>
@@ -201,7 +196,8 @@ function searchData(value){
             <td>${datapro[i].taxes}</td>
             <td>${datapro[i].ads}</td>
             <td>${datapro[i].discount}</td>
-            <td>${datapro[i].total}</td>
+            <td>${datapro[i].count}</td>
+            <td>${datapro[i].total*count.value}</td>
             <td>${datapro[i].category}</td>
             <td><button onclick="updata(${i})" id="updata">Updata</button></td>
             <td><button onclick="deletedata(${i})" id="delete">Delete</button></td>
